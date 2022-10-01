@@ -1,0 +1,39 @@
+type Query{
+	
+	student : String
+	getOrders(id:Int) : OrdersResponse
+	
+	locations(ids:[ID!]) : Location
+
+	}
+	
+type OrdersResponse {
+	id :Int
+	orderType :String
+	paymentStatus : Boolean 
+	price: Int
+	accountDetails : AccountDetails
+	}
+	
+type AccountDetails {
+    id :Int
+    name : String
+    email : String
+    active : Boolean
+
+}
+
+
+
+type Location {
+  id: ID!
+  name: String
+  reviews: [Review!]!
+}
+
+type Review {
+  id: ID!
+  comment: String!
+  rating: Int!
+}
+

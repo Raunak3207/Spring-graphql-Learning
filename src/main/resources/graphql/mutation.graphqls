@@ -1,0 +1,15 @@
+type Mutation{
+
+  addOrder(orderDetails : OrderDetails,id:Int) : Boolean
+
+}
+
+input OrderDetails{
+  
+   	id :Int
+	orderType :String
+	paymentStatus : Boolean 
+	price: Float
+
+}
+
